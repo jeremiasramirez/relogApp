@@ -1,2 +1,0 @@
-# relogApp
-App relog

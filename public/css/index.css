@@ -8,7 +8,7 @@
     width: 100vw;
     height: 50px;
     justify-content: center;
-    background-color: rgb(233, 70, 70);
+    background-color: rgba(194, 59, 59, 0.897);
     align-items: center;
     transition: 1s;
     position: sticky;
@@ -51,5 +51,61 @@
 }
 
 .active--red {
-    background-color: rgb(175, 41, 31);
+    background-color: rgb(170, 56, 48);
+}
+
+#fan {
+    animation: rotates 2s infinite linear;
+    color: orangered;
+    transition: 1s;
+}
+
+@keyframes rotates {
+    to {
+        transition: 1s;
+        transform: rotate(360deg)
+    }
+}
+
+.container__hour {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background-color: rgb(173, 28, 84);
+    overflow: hidden;
+}
+
+.container__poster {
+    position: absolute;
+    top: 0;
+    height: inherit;
+    text-align: center;
+    width: inherit;
+    margin: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(212, 51, 78);
+    animation: fadeOut 1.8s .3s linear;
+}
+
+@keyframes fadeOut {
+    to {
+        transform: translateX(350px);
+    }
+}
+
+.container__hour__timing {
+    text-align: center;
+    font-family: sans-serif;
+    color: #ddd;
+    margin-top: 90px;
+}
+
+.letter10 {
+    font-size: 120px;
+    margin-top: -.2em;
+    color: rgb(184, 32, 57)
 }

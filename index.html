@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<html lang="es" ng-app="relog">
 
-	<link rel="icon" href="icon.png">
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>Relog</title>
+
+    <link rel="icon" href="icon.png">
+
+
+    <!-- main css -->
+    <link rel="stylesheet" href="public/css/index.css">
+
+
+    <!-- main js -->
+    <script src="public/js/index.js"></script>
+
+
+    <!-- fontawesome -->
+    <script src="public/fontawesome/js/all.js"></script>
+
+
+    <!-- jeremias-lib css -->
+    <link rel="stylesheet" href="node_modules/jeremias-lib/css/jeremias-lib.css">
+
+
+    <!-- easydom css -->
+    <link rel="stylesheet" href="node_modules/jeremias-easydom/easydom.css">
+
+
+    <!-- easydom js -->
+    <script src="node_modules/jeremias-easydom/easydom.js"></script>
+
+
+    <!-- angular js -->
+    <script src="node_modules/angular/angular.min.js">
+    </script>
+
+
+    <!-- angular route -->
+    <script src="node_modules/angular-route/angular-route.js">
+    </script>
+
+
+    <!-- Config app -->
+    <script src="public/config/angular.config.js">
+    </script>
+
+
+    <!-- controllers -->
+    <script src="public/controller/main.controller.js"></script>
+
+
+    <!-- config routes -->
+    <script src="public/config.route.js"></script>
+
+
+
 </head>
-<body>
-	
+
+<body ng-controller="main">
+
+
+
+    <p>director: {{nombre}}</p>
+
+
+
 </body>
+
 </html>

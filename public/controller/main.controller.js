@@ -3,7 +3,8 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
 
     // features
     $scope.features = {
-        showposter: 0
+        showposter: 0,
+        msjOnNewHour: 0
     }
 
 
@@ -13,17 +14,16 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
 
 
 
-
-
-
     //timing 
     $scope.timingTime = {
         hr: 0,
         min: 0,
         sec: 0,
+        mills: 0
     }
 
     $scope.hora = 0;
+
     setInterval(function() {
 
         $scope.hora = new Date();
@@ -31,17 +31,29 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
         $scope.timingTime.hr = $scope.hora.getHours();
         $scope.timingTime.min = $scope.hora.getMinutes();
         $scope.timingTime.sec = $scope.hora.getSeconds();
+        $scope.timingTime.mills = $scope.hora.getMilliseconds();
+
+        $scope.resolveLocalTime($scope.timingTime);
 
 
-        resolveLocalTime($scope.timingTime.hr);
+        $scope.features.msjOnNewHour = $scope.timingTime.min
 
+
+
+        if ($scope.features.msjOnNewHour == 0) {
+            floatNotificationInfo("En hora buena");
+        }
 
         $scope.$apply()
     }, 1000);
 
 
 
-    resolveLocalTime = function(time) {
+
+
+
+
+    $scope.resolveLocalTime = function(timingTime) {
 
         if ($scope.timingTime.hr == '13') {
             $scope.timingTime.hr = 1;
@@ -77,8 +89,6 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
             $scope.timingTime.hr = 11;
         }
     }
-
-
 
 
 

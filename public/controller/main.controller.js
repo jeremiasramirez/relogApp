@@ -4,9 +4,10 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
     // features
     $scope.features = {
         showposter: 0,
-        msjOnNewHour: 0
+        msjOnNewHour: 0,
+        switcherDay: "AM"
     }
-
+    $scope.switcherDay = $scope.features.switcherDay;
 
     $timeout(function() {
         $scope.features.showposter = 1;
@@ -44,6 +45,9 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
             floatNotificationInfo("En hora buena");
         }
 
+
+
+
         $scope.$apply()
     }, 1000);
 
@@ -55,6 +59,15 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
 
     $scope.resolveLocalTime = function(timingTime) {
 
+        if ($scope.timingTime.hr >= 13) {
+            $scope.features.switcherDay = "PM"
+        } else {
+            $scope.features.switcherDay = "AM"
+        }
+
+        if ($scope.timingTime.hr == 0) {
+            $scope.timingTime.hr = 1;
+        }
         if ($scope.timingTime.hr == '13') {
             $scope.timingTime.hr = 1;
         }
@@ -88,6 +101,10 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
         if ($scope.timingTime.hr == 22) {
             $scope.timingTime.hr = 11;
         }
+        if ($scope.timingTime.hr == 23) {
+            $scope.timingTime.hr = 11;
+        }
+
     }
 
 

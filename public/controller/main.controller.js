@@ -7,7 +7,8 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
         msjOnNewHour: 0,
         switcherDay: "AM"
     }
-    $scope.switcherDay = $scope.features.switcherDay;
+
+
 
     $timeout(function() {
         $scope.features.showposter = 1;
@@ -28,6 +29,16 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
     setInterval(function() {
 
         $scope.hora = new Date();
+
+
+
+        if ($scope.hora.getHours() >= 12) {
+            $scope.switcherDay = "PM";
+        }
+        if ($scope.hora.getHours() >= 24) {
+            $scope.switcherDay = "AM";
+        }
+
 
         $scope.timingTime.hr = $scope.hora.getHours();
         $scope.timingTime.min = $scope.hora.getMinutes();
@@ -56,14 +67,9 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
 
 
 
-
     $scope.resolveLocalTime = function(timingTime) {
 
-        if ($scope.timingTime.hr >= 13) {
-            $scope.features.switcherDay = "PM"
-        } else {
-            $scope.features.switcherDay = "AM"
-        }
+
 
         if ($scope.timingTime.hr == 0) {
             $scope.timingTime.hr = 1;
@@ -93,7 +99,7 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
             $scope.timingTime.hr = 8;
         }
         if ($scope.timingTime.hr == 20) {
-            $scope.timingTime.hr = 9;
+            $scope.timingTime.hr = 8;
         }
         if ($scope.timingTime.hr == 21) {
             $scope.timingTime.hr = 10;
@@ -105,11 +111,10 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
             $scope.timingTime.hr = 11;
         }
 
+
+
+
     }
-
-
-
-
 
 
 }])

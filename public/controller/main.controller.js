@@ -35,7 +35,9 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
         if ($scope.hora.getHours() >= 12) {
             $scope.switcherDay = "PM";
         }
-        if ($scope.hora.getHours() >= 24) {
+        if ($scope.hora.getHours() >= 24 ||
+            $scope.hora.getHours() == 00 ||
+            $scope.hora.getHours() >= 01) {
             $scope.switcherDay = "AM";
         }
 

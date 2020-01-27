@@ -1,7 +1,5 @@
-app.controller("countries", ["$scope", function($scope) {
+app.controller("countries", ["$scope", "$routeParams", function($scope, $routeParams) {
 
-
-    $scope.name = "jeremias"
 
 
 }])

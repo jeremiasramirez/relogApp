@@ -18,5 +18,5 @@ app.config(["$routeProvider", function($routeProvider) {
     })
 
 
-
+    console.log($routeProvider)
 }])

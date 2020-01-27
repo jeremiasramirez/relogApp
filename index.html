@@ -13,7 +13,7 @@
 
 
 
-    <link rel="icon" href="icon.png">
+    <link rel="icon" href="assets/icon/icon.png">
 
 
     <!-- main css -->
@@ -83,11 +83,10 @@
 
 
     <nav class="menu--black__">
-        <li title="Home" class="active--red"><a href="#"><span class="far fa-clock"></span > </a></li>
-        <li title="Countries" class=""><a href="#!countries">Countries</a></li>
+        <li title="Home" ng-class="{'active--red' : activeClassMenu == 1 }" ng-click="active()"><a href="#"><span class="far fa-clock"></span > </a></li>
+        <li title="Countries" ng-click="active()" ng-class="{'active--red' : activeClassMenu == 0 }"><a href="#!countries">Countries</a></li>
 
     </nav>
-
 
 
 

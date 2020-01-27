@@ -29,16 +29,17 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
     setInterval(function() {
 
         $scope.hora = new Date();
+        console.log($scope.hora.getHours())
 
 
-
-        if ($scope.hora.getHours() >= 12) {
+        if ($scope.hora.getHours() == 12) {
             $scope.switcherDay = "PM";
-        }
-        if ($scope.hora.getHours() >= 24 ||
+        } else if ($scope.hora.getHours() >= 24 ||
             $scope.hora.getHours() == 00 ||
             $scope.hora.getHours() >= 01) {
             $scope.switcherDay = "AM";
+        } else {
+            $scope.switcherDay = "PM";
         }
 
 
@@ -64,7 +65,17 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
         $scope.$apply()
     }, 1000);
 
+    $scope.activeClassMenu = 1;
 
+    $scope.active = function() {
+
+        if ($scope.activeClassMenu == 1) {
+            $scope.activeClassMenu = 0;
+        } else {
+            $scope.activeClassMenu = 1;
+        }
+
+    }
 
 
 

@@ -74,7 +74,7 @@
     border: none;
     border-radius: 50%;
     padding: 0;
-    background-color: rgb(173, 28, 84);
+    background-image: linear-gradient( to left, rgb(196, 31, 94), rgb(211, 54, 54), rgb(235, 135, 69));
     overflow: hidden;
 }
 
@@ -88,13 +88,14 @@
     border-radius: 50%;
     /* background-image: url('assets/image-app/timeSolar.jpg'); */
     border: none;
-    background-color: rgba(212, 51, 78, 80%);
-    animation: fadeOut 1.8s .3s linear;
+    background-image: linear-gradient( to left, rgb(199, 32, 96), rgb(211, 54, 54));
+    animation: fadeOut 1.8s .5s linear;
 }
 
 @keyframes fadeOut {
     to {
         transform: translateX(350px);
+        opacity: 0;
     }
 }
 

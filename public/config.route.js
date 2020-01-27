@@ -8,7 +8,10 @@ app.config(["$routeProvider", function($routeProvider) {
         controller: "main"
     })
 
-
+    .when("/countries", {
+        templateUrl: "views/countries.controller.html",
+        controller: "countries"
+    })
 
     .otherwise({
         redirectTo: "/"

@@ -86,6 +86,7 @@
     width: inherit;
     margin: 0;
     border-radius: 50%;
+    /* background-image: url('assets/image-app/timeSolar.jpg'); */
     border: none;
     background-color: rgba(212, 51, 78, 80%);
     animation: fadeOut 1.8s .3s linear;

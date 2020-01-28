@@ -8,10 +8,22 @@ app.config(["$routeProvider", function($routeProvider) {
         controller: "main"
     })
 
-    .when("/countries", {
-        templateUrl: "views/countries.controller.html",
-        controller: "countries"
+    .when("/choose", {
+        templateUrl: "views/view.controllerChoose.html",
+        controller: "choose"
     })
+
+    .when("/choose/es", {
+        templateUrl: "views/view.controllerES.html",
+        controller: "es"
+    })
+
+    .when("/choose/en", {
+        templateUrl: "views/view.controllerEN.html",
+        controller: "en"
+    })
+
+
 
     .otherwise({
         redirectTo: "/"

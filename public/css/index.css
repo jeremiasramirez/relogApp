@@ -74,7 +74,8 @@
     border: none;
     border-radius: 50%;
     padding: 0;
-    background-image: linear-gradient( to left, rgb(196, 31, 94), rgb(211, 54, 54), rgb(235, 135, 69));
+    /* background-image: url('../../assets/image-app/timeSolar.jpg'); */
+    background-image: linear-gradient( rgb(245, 69, 136), rgb(241, 72, 72), rgb(190, 139, 42));
     overflow: hidden;
 }
 
@@ -86,9 +87,10 @@
     width: inherit;
     margin: 0;
     border-radius: 50%;
-    /* background-image: url('assets/image-app/timeSolar.jpg'); */
+    margin-left: -4px;
+    background-image: url('../../assets/image-app/timeSolar.jpg');
     border: none;
-    background-image: linear-gradient( to left, rgb(199, 32, 96), rgb(211, 54, 54));
+    /* background-image: linear-gradient( to left, rgb(196, 31, 94), rgb(211, 54, 54), rgb(235, 135, 69)); */
     animation: fadeOut 1.8s .5s linear;
 }
 
@@ -102,8 +104,9 @@
 .container__hour__timing {
     text-align: center;
     font-family: sans-serif;
-    color: #ddd;
+    color: rgb(219, 16, 175);
     margin-top: 90px;
+    color: white;
 }
 
 .letter10 {

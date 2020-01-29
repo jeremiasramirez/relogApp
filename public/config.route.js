@@ -8,6 +8,11 @@ app.config(["$routeProvider", function($routeProvider) {
         controller: "main"
     })
 
+    .when("/:", {
+        templateUrl: "views/view.main.html",
+        controller: "main"
+    })
+
     .when("/choose", {
         templateUrl: "views/view.controllerChoose.html",
         controller: "choose"

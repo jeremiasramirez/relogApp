@@ -1,4 +1,4 @@
-app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
+app.controller("main", ["$scope", "$routeParams", "$timeout", function($scope, $routeParams, $timeout) {
 
 
     // features
@@ -81,13 +81,29 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $scope.resolveLocalTime = function(timingTime) {
 
 
 
-        if ($scope.timingTime.hr == 0) {
-            $scope.timingTime.hr = 1;
-        }
+        // if ($scope.timingTime.hr == 0) {
+        //     $scope.timingTime.hr = 1;
+        // }
         if ($scope.timingTime.hr == '13') {
             $scope.timingTime.hr = 1;
             $scope.switcherDay = "PM";
@@ -135,6 +151,10 @@ app.controller("main", ["$scope", "$timeout", function($scope, $timeout) {
         if ($scope.timingTime.hr == 23) {
             $scope.timingTime.hr = 11;
             $scope.switcherDay = "PM";
+        }
+        if ($scope.timingTime.hr == '00') {
+            $scope.timingTime.hr = 12;
+            $scope.switcherDay = "AM";
         }
 
 

@@ -1,5 +1,8 @@
 app.controller("es", ["$scope", "$routeParams", function($scope, $routeParams) {
 
-    $scope.choose = "klk es";
 
+
+    $scope.backButton = function() {
+        window.history.back()
+    }
 }])

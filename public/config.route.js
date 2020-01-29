@@ -23,6 +23,11 @@ app.config(["$routeProvider", function($routeProvider) {
         controller: "es"
     })
 
+    .when("/choose/es/:id", {
+        templateUrl: "views/view.controllerES.html",
+        controller: "onlyCountryES"
+    })
+
     .when("/choose/en", {
         templateUrl: "views/view.controllerEN.html",
         controller: "en"

@@ -26,7 +26,7 @@ app.controller("es", ["$scope", "$http", function($scope, $http) {
     }).then(function(response) {
         $scope.countriesES = response
 
-        console.log($scope.countriesES.data[0].flag)
+        console.log($scope.countriesES.data)
     })
 
 

@@ -1,6 +1,6 @@
 <!-- back page button -->
 <span class="backButton in" ng-click="backButton()">Back</span>
-
+<!-- <span class="in fas fa-circl">   </span> -->
 <!-- searchs countries -->
 
 
@@ -48,6 +48,12 @@
                 <span class="between__title">Capital</span>
                 <span>{{country.capital}}</span>
             </div>
+
+            <div class="between">
+                <span class="between__title">  Called code</span>
+                <span>{{country.callingCodes | cutKey}}</span >
+            </div>
+
 
 
         </div>

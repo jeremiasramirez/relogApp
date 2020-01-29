@@ -152,6 +152,10 @@
     transition: 1s;
 }
 
+.icon {
+    color: rgb(255, 106, 155);
+}
+
 .es {
     background-image: linear-gradient( to left, rgb(226, 27, 110), rgb(196, 170, 25));
 }

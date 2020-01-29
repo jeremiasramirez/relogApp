@@ -25,8 +25,10 @@ app.config(["$routeProvider", function($routeProvider) {
 
     .when("/choose/es/:id", {
         templateUrl: "views/view.controllerES.html",
-        controller: "onlyCountryES"
+        controller: "es"
     })
+
+
 
     .when("/choose/en", {
         templateUrl: "views/view.controllerEN.html",

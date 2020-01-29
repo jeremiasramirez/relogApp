@@ -7,18 +7,53 @@
 <!-- cards countries -->
 
 
-<section class="cards">
+<section class="cards" ng-hide="IfNotExistParams== 0">
 
     <article ng-repeat="countries in countriesES.data">
 
         <div class="card__countries">
-            <h1 class="title__cards">{{countries.name}}</h1>
-            <img ng-src={{countries.flag}} alt="image countries" class="card__countries__image">
 
-            <a href="#!choose/es?{{countries.alpha2Code}}">
+            <h1 class="title__cards">{{countries.name}}</h1>
+            <img ng-src={{countries.flag}} alt="image countries" class="in card__countries__image">
+
+            <a href="#!choose/es/{{countries.alpha2Code}}">
                 <span class="fas fa-angle-right iconLink"> </span>
             </a>
+
         </div>
     </article>
+
+</section>
+
+
+
+
+
+<section class="in" ng-hide="IfNotExistParams== 1">
+
+    <article class="cards__only" ng-repeat="country in countriesOnlyES | limitTo:0:1">
+
+        <div class="card__only">
+
+            <h1 class="title__cards only__title">{{country.name}}</h1>
+            <img ng-src={{country.flag}} alt="image countries" class="in image__only">
+
+
+            <div class="between">
+                <span class="between__title">Alpha code</span>
+                <span>{{country.alpha2Code}}</span>
+            </div>
+
+            <div class="between">
+                <span class="between__title">Capital</span>
+                <span>{{country.capital}}</span>
+            </div>
+
+
+        </div>
+
+    </article>
+
+
 
 </section>

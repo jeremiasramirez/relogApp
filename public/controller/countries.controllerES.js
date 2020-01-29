@@ -1,4 +1,4 @@
-app.controller("es", ["$scope", "$http", function($scope, $http) {
+app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http, $routeParams) {
 
     // back page
 
@@ -9,25 +9,48 @@ app.controller("es", ["$scope", "$http", function($scope, $http) {
 
 
     $scope.countriesES = [];
+    $scope.countriesOnlyES;
+    $scope.IfNotExistParams = null;
 
 
 
+    $scope.route = $routeParams['id']
+
+    if (!$scope.route) {
+        $scope.IfNotExistParams = 1;
+        let urlS = 'https://restcountries.eu/rest/v2/lang/es'
+
+        $http({
+
+            method: 'get',
+            url: urlS
+
+        }).then(function(response) {
 
 
+            $scope.countriesES = response
+
+        })
+
+    } else {
+        $scope.IfNotExistParams = 0;
+        let urlS = 'https://restcountries.eu/rest/v2/alpha/' + $scope.route
+
+        $http({
+
+            method: 'get',
+            url: urlS
+
+        }).then(function(response) {
+
+
+            $scope.countriesOnlyES = response
+
+            console.log($scope.countriesOnlyES)
+        })
+    }
     // http
 
-    let urlS = 'https://restcountries.eu/rest/v2/lang/es'
-
-    $http({
-
-        method: 'get',
-        url: urlS
-
-    }).then(function(response) {
-        $scope.countriesES = response
-
-        console.log($scope.countriesES.data)
-    })
 
 
 

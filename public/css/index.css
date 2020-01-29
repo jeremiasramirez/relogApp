@@ -211,3 +211,39 @@
     font-family: arial;
     margin-bottom: -8px;
 }
+
+.card__only {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 318px;
+    border-bottom: 1px solid #eeee;
+}
+
+.between span {
+    color: blue;
+    text-align: center;
+}
+
+.image__only {
+    width: 100%;
+    border: none;
+    border-radius: 2%;
+}
+
+.only__title {
+    color: rgb(48, 139, 40);
+}
+
+@media screen and (min-width: 600px) {
+    .image__only {
+        width: 600px;
+    }
+}

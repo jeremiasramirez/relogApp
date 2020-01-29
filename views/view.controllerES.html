@@ -1,1 +1,24 @@
+<!-- back page button -->
 <span class="backButton in" ng-click="backButton()">Back</span>
+
+<!-- searchs countries -->
+
+
+<!-- cards countries -->
+
+
+<section class="cards">
+
+    <article ng-repeat="countries in countriesES.data">
+
+        <div class="card__countries">
+            <h1 class="title__cards">{{countries.name}}</h1>
+            <img ng-src={{countries.flag}} alt="image countries" class="card__countries__image">
+
+            <a href="#">
+                <span class="fas fa-angle-right iconLink"> </span>
+            </a>
+        </div>
+    </article>
+
+</section>

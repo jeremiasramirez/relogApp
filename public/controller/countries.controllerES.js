@@ -15,24 +15,21 @@ app.controller("es", ["$scope", "$http", function($scope, $http) {
 
 
     // http
-    var getData = function() {
 
-        let urlS = 'https://restcountries.eu/rest/v2/lang/es'
+    let urlS = 'https://restcountries.eu/rest/v2/lang/es'
 
-        $http({
+    $http({
 
-            method: 'get',
-            url: urlS
+        method: 'get',
+        url: urlS
 
-        }).then(function(response) {
+    }).then(function(response) {
+        $scope.countriesES = response
 
-            $scope.countriesES.push(response)
+        console.log($scope.countriesES.data[0].flag)
+    })
 
-        })
 
-    }
-
-    getData()
 
 
     // paginator

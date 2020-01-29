@@ -178,3 +178,36 @@
     display: inline-block;
     background-color: #b93030;
 }
+
+.card__countries {
+    width: 310px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: .6em;
+}
+
+.card__countries__image {
+    width: inherit;
+}
+
+.iconLink {
+    font-size: 22px;
+    border-radius: 10%;
+    color: white;
+    display: inline-block;
+    background-color: rgb(209, 60, 117);
+    transition: .3s;
+}
+
+.iconLink:hover {
+    background-color: rgb(158, 27, 27);
+    transition: .8s;
+}
+
+.title__cards {
+    color: rgb(87, 40, 73);
+    font-family: arial;
+    margin-bottom: -8px;
+}

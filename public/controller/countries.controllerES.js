@@ -11,7 +11,7 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
     $scope.countriesES = [];
     $scope.countriesOnlyES;
     $scope.IfNotExistParams = null;
-
+    $scope.spinnChange = 1;
 
 
     $scope.route = $routeParams['id']
@@ -30,6 +30,7 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
 
             $scope.countriesES = response
 
+
         })
 
     } else {
@@ -45,10 +46,13 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
 
 
             $scope.countriesOnlyES = response
-
+                // $scope.spinnChange = 1;
             console.log($scope.countriesOnlyES)
         })
     }
+
+
+
     // http
 
 

@@ -1,249 +1,275 @@
-.menu--black__ {
-    display: flex;
-    margin: 0 0 0px 0;
-    padding: 0 0;
-    border: 0;
-    margin-top: -9px;
-    margin-left: -6px;
-    width: 100vw;
-    height: 50px;
-    justify-content: center;
-    background-color: rgba(194, 59, 59, 0.897);
-    align-items: center;
-    transition: 1s;
-    position: sticky;
-    margin-bottom: 1em;
-}
-
-.menu--black__>li {
-    font-weight: bolder;
-    color: #eee;
-    line-height: 30px;
-    list-style: none;
-    margin: 0 3px -0px 0px;
-    height: 30px;
-    margin-right: 0;
-    padding-left: 2px;
-    padding-top: .7em;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.menu--black__ li:hover {
-    background-color: rgb(175, 41, 31);
-}
-
-.menu--black__>li>a {
-    color: #eee;
-    text-decoration-line: none;
-    font-family: roboto;
-    transition: .4s;
-}
-
-.menu--black__>li>a:hover {
-    opacity: .9;
-    transition: .4s;
-}
-
-.fa-clock {
-    margin-top: -.5em;
-    font-size: 24px;
-}
-
-.active--red {
-    background-color: rgb(170, 56, 48);
-}
-
-#fan {
-    animation: rotates 2s infinite linear;
-    color: orangered;
-    transition: 1s;
-}
-
-@keyframes rotates {
-    to {
-        transition: 1s;
-        transform: rotate(360deg)
-    }
-}
-
-.container__hour {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    border: none;
-    border-radius: 50%;
-    padding: 0;
-    /* background-image: url('../../assets/image-app/timeSolar.jpg'); */
-    background-image: linear-gradient( rgb(245, 69, 136), rgb(241, 72, 72), rgb(190, 139, 42));
-    overflow: hidden;
-}
-
-.container__poster {
-    position: absolute;
-    top: 0;
-    height: inherit;
-    text-align: center;
-    width: inherit;
-    margin: 0;
-    border-radius: 50%;
-    margin-left: -4px;
-    background-image: url('../../assets/image-app/timeSolar.jpg');
-    border: none;
-    /* background-image: linear-gradient( to left, rgb(196, 31, 94), rgb(211, 54, 54), rgb(235, 135, 69)); */
-    animation: fadeOut 1.8s .5s linear;
-}
-
-@keyframes fadeOut {
-    to {
-        transform: translateX(350px);
-        opacity: 0;
-    }
-}
-
-.container__hour__timing {
-    text-align: center;
-    font-family: sans-serif;
-    color: rgb(219, 16, 175);
-    margin-top: 90px;
-    color: white;
-}
-
-.letter10 {
-    font-size: 120px;
-    margin-top: -.2em;
-    color: rgb(150, 33, 53)
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 1em;
-}
-
-.card {
-    width: 315px;
-    margin: .4em;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    text-align: center;
-    font-family: sans-serif;
-    border-radius: 4px;
-}
-
-.card a {
-    text-decoration: none;
-    border: none;
-    width: 80px;
-    font-weight: 600;
-    color: white;
-    transition: .2s;
-    border-radius: 4px;
-    background-image: linear-gradient( to left, rgb(125, 184, 89), rgb(211, 182, 21));
-}
-
-.card a:hover {
-    opacity: .7;
-    transition: 1s;
-}
-
-.icon {
-    color: rgb(255, 106, 155);
-}
-
-.es {
-    background-image: linear-gradient( to left, rgb(226, 27, 110), rgb(196, 170, 25));
-}
-
-.en {
-    background-image: linear-gradient( to left, rgb(202, 24, 98), rgba(196, 170, 25, 0.87));
-}
-
-.backButton {
-    border: none;
-    font-weight: 600;
-    color: white;
-    border-radius: 3px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    text-align: center;
-    width: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    background-color: #b93030;
-}
-
-.card__countries {
-    width: 310px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: .6em;
-}
-
-.card__countries__image {
-    width: inherit;
-}
-
-.iconLink {
-    font-size: 22px;
-    border-radius: 10%;
-    color: white;
-    display: inline-block;
-    background-color: rgb(209, 60, 117);
-    transition: .3s;
-}
-
-.iconLink:hover {
-    background-color: rgb(158, 27, 27);
-    transition: .8s;
-}
-
-.title__cards {
-    color: rgb(87, 40, 73);
-    font-family: arial;
-    margin-bottom: -8px;
-}
-
-.card__only {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 318px;
-    border-bottom: 1px solid #eeee;
-}
-
-.between span {
-    color: blue;
-    text-align: center;
-}
-
-.image__only {
-    width: 100%;
-    border: none;
-    border-radius: 2%;
-}
-
-.only__title {
-    color: rgb(48, 139, 40);
-}
-
-@media screen and (min-width: 600px) {
-    .image__only {
-        width: 600px;
-    }
-}
+        .menu--black__ {
+            display: flex;
+            margin: 0 0 0px 0;
+            padding: 0 0;
+            border: 0;
+            margin-top: -9px;
+            margin-left: -6px;
+            width: 100vw;
+            height: 50px;
+            justify-content: center;
+            background-color: rgba(194, 59, 59, 0.897);
+            align-items: center;
+            transition: 1s;
+            position: sticky;
+            margin-bottom: 1em;
+        }
+        
+        .menu--black__>li {
+            font-weight: bolder;
+            color: #eee;
+            line-height: 30px;
+            list-style: none;
+            margin: 0 3px -0px 0px;
+            height: 30px;
+            margin-right: 0;
+            padding-left: 2px;
+            padding-top: .7em;
+            cursor: pointer;
+            transition: 1s;
+        }
+        
+        .menu--black__ li:hover {
+            background-color: rgb(175, 41, 31);
+        }
+        
+        .menu--black__>li>a {
+            color: #eee;
+            text-decoration-line: none;
+            font-family: roboto;
+            transition: .4s;
+        }
+        
+        .menu--black__>li>a:hover {
+            opacity: .9;
+            transition: .4s;
+        }
+        
+        .fa-clock {
+            margin-top: -.5em;
+            font-size: 24px;
+        }
+        
+        .active--red {
+            background-color: rgb(170, 56, 48);
+        }
+        
+        #fan {
+            animation: rotates 2s infinite linear;
+            color: orangered;
+            transition: 1s;
+        }
+        
+        @keyframes rotates {
+            to {
+                transition: 1s;
+                transform: rotate(360deg)
+            }
+        }
+        
+        .container__hour {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            /* background-image: url('../../assets/image-app/timeSolar.jpg'); */
+            background-image: linear-gradient( rgb(245, 69, 136), rgb(241, 72, 72), rgb(190, 139, 42));
+            overflow: hidden;
+        }
+        
+        .container__poster {
+            position: absolute;
+            top: 0;
+            height: inherit;
+            text-align: center;
+            width: inherit;
+            margin: 0;
+            border-radius: 50%;
+            margin-left: -4px;
+            background-image: url('../../assets/image-app/timeSolar.jpg');
+            border: none;
+            /* background-image: linear-gradient( to left, rgb(196, 31, 94), rgb(211, 54, 54), rgb(235, 135, 69)); */
+            animation: fadeOut 1.8s .5s linear;
+        }
+        
+        @keyframes fadeOut {
+            to {
+                transform: translateX(350px);
+                opacity: 0;
+            }
+        }
+        
+        .container__hour__timing {
+            text-align: center;
+            font-family: sans-serif;
+            color: rgb(219, 16, 175);
+            margin-top: 90px;
+            color: white;
+        }
+        
+        .letter10 {
+            font-size: 120px;
+            margin-top: -.2em;
+            color: rgb(150, 33, 53)
+        }
+        
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1em;
+        }
+        
+        .card {
+            width: 315px;
+            margin: .4em;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            text-align: center;
+            font-family: sans-serif;
+            border-radius: 4px;
+        }
+        
+        .card a {
+            text-decoration: none;
+            border: none;
+            width: 80px;
+            font-weight: 600;
+            color: white;
+            transition: .2s;
+            border-radius: 4px;
+            background-image: linear-gradient( to left, rgb(125, 184, 89), rgb(211, 182, 21));
+        }
+        
+        .card a:hover {
+            opacity: .7;
+            transition: 1s;
+        }
+        
+        .icon {
+            color: rgb(255, 106, 155);
+        }
+        
+        .es {
+            background-image: linear-gradient( to left, rgb(226, 27, 110), rgb(196, 170, 25));
+        }
+        
+        .en {
+            background-image: linear-gradient( to left, rgb(202, 24, 98), rgba(196, 170, 25, 0.87));
+        }
+        
+        .backButton {
+            border: none;
+            font-weight: 600;
+            color: white;
+            border-radius: 3px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            cursor: pointer;
+            text-align: center;
+            width: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            background-color: #b93030;
+        }
+        
+        .card__countries {
+            width: 310px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin: .6em;
+        }
+        
+        .card__countries__image {
+            width: inherit;
+        }
+        
+        .iconLink {
+            font-size: 22px;
+            border-radius: 10%;
+            color: white;
+            display: inline-block;
+            background-color: rgb(209, 60, 117);
+            transition: .3s;
+        }
+        
+        .iconLink:hover {
+            background-color: rgb(158, 27, 27);
+            transition: .8s;
+        }
+        
+        .title__cards {
+            color: rgb(87, 40, 73);
+            font-family: arial;
+            margin-bottom: -8px;
+        }
+        
+        .card__only {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 318px;
+            border-bottom: 1px solid #eeee;
+        }
+        
+        .between span {
+            color: blue;
+            text-align: center;
+        }
+        
+        .image__only {
+            width: 100%;
+            border: none;
+            border-radius: 2%;
+        }
+        
+        .only__title {
+            color: rgb(48, 139, 40);
+        }
+        
+        @media screen and (min-width: 600px) {
+            .image__only {
+                width: 600px;
+            }
+        }
+        
+        .spinn {
+            float: right;
+            font-size: 16px;
+            animation: spinns 2s infinite linear;
+        }
+        
+        @keyframes spinns {
+            to {
+                transition: .7s;
+                transform: rotate(360deg);
+                color: red;
+            }
+            20% {
+                color: magenta;
+            }
+            40% {
+                color: orange;
+            }
+            60% {
+                color: rgb(177, 74, 14);
+            }
+            80% {
+                color: #ddd;
+            }
+        }

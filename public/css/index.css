@@ -133,16 +133,23 @@
     border: none;
     text-align: center;
     font-family: sans-serif;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .card a {
     text-decoration: none;
     border: none;
     width: 80px;
+    font-weight: 600;
     color: white;
+    transition: .2s;
     border-radius: 4px;
-    background-image: linear-gradient( to left, rgb(218, 174, 192), rgb(196, 170, 25));
+    background-image: linear-gradient( to left, rgb(125, 184, 89), rgb(211, 182, 21));
+}
+
+.card a:hover {
+    opacity: .7;
+    transition: 1s;
 }
 
 .es {

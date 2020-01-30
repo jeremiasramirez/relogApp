@@ -9,10 +9,10 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
 
 
     $scope.countriesES = [];
-    $scope.countriesOnlyES;
+    $scope.countriesOnlyES = []
     $scope.IfNotExistParams = null;
     $scope.spinnChange = 1;
-
+    $scope.searchOfCountry = ''
 
     $scope.route = $routeParams['id']
 
@@ -28,7 +28,7 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
         }).then(function(response) {
 
 
-            $scope.countriesES = response
+            $scope.countriesES = response.data
 
 
         })
@@ -46,7 +46,7 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
 
 
             $scope.countriesOnlyES = response
-                // $scope.spinnChange = 1;
+
             console.log($scope.countriesOnlyES)
         })
     }

@@ -64,20 +64,6 @@ app.controller("main", ["$scope", "$routeParams", "$timeout", function($scope, $
         $scope.$apply()
     }, 1000);
 
-    $scope.activeClassMenu = 1;
-
-    $scope.active = function() {
-
-        if ($scope.activeClassMenu == 1) {
-            $scope.activeClassMenu = 0;
-
-        } else {
-            $scope.activeClassMenu = 1;
-
-        }
-
-    }
-
 
 
 

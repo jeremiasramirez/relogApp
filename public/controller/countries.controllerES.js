@@ -47,7 +47,6 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
 
             $scope.countriesOnlyES = response
 
-            console.log($scope.countriesOnlyES)
         })
     }
 

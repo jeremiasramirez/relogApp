@@ -1,21 +1,23 @@
-app.controller("en", ["$scope", "$http", function($scope, $http) {
+app.controller("en", ["$scope", "$http", "$routeParams", function($scope, $http, $routeParams) {
 
     // back page
     $scope.backButton = function() {
         window.history.back()
     }
 
-    $scope.countriesEN = [];
 
 
+    $scope.countriesES = [];
+    $scope.countriesOnlyES = []
+    $scope.IfNotExistParams = null;
+    $scope.spinnChange = 1;
+    $scope.searchOfCountry = ''
 
+    $scope.route = $routeParams['id']
 
-    // http
-
-    var getData = function() {
-
+    if (!$scope.route) {
+        $scope.IfNotExistParams = 1;
         let urlS = 'https://restcountries.eu/rest/v2/lang/en'
-
 
         $http({
 
@@ -24,17 +26,36 @@ app.controller("en", ["$scope", "$http", function($scope, $http) {
 
         }).then(function(response) {
 
-            $scope.countriesEN.push(response)
+
+            $scope.countriesES = response.data
+
 
         })
 
+    } else {
+        $scope.IfNotExistParams = 0;
+        let urlS = 'https://restcountries.eu/rest/v2/alpha/' + $scope.route
+
+        $http({
+
+            method: 'get',
+            url: urlS
+
+        }).then(function(response) {
+
+
+            $scope.countriesOnlyES = response
+
+        })
     }
 
-    getData()
 
 
 
-    // paginador
+
+
+    // paginator
+
 
 
 

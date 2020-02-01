@@ -37,6 +37,8 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
         $scope.IfNotExistParams = 0;
         let urlS = 'https://restcountries.eu/rest/v2/alpha/' + $scope.route
 
+
+
         $http({
 
             method: 'get',
@@ -45,9 +47,11 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
         }).then(function(response) {
 
 
-            $scope.countriesOnlyES = response
+            $scope.countriesES.push(response.data[0])
 
         })
+
+
     }
 
 

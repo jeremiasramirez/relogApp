@@ -27,7 +27,8 @@ app.controller("en", ["$scope", "$http", "$routeParams", function($scope, $http,
         }).then(function(response) {
 
 
-            $scope.countriesES = response.data
+            $scope.countriesES.push(response.data[0])
+            console.log($scope.countriesES)
 
 
         })

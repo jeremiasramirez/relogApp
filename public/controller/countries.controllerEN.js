@@ -27,8 +27,8 @@ app.controller("en", ["$scope", "$http", "$routeParams", function($scope, $http,
         }).then(function(response) {
 
 
-            $scope.countriesES.push(response.data[0])
-            console.log($scope.countriesES)
+            $scope.countriesES = (response.data)
+
 
 
         })
@@ -45,7 +45,7 @@ app.controller("en", ["$scope", "$http", "$routeParams", function($scope, $http,
         }).then(function(response) {
 
 
-            $scope.countriesOnlyES = response
+            $scope.countriesOnlyES = (response.data)
 
         })
     }
@@ -56,10 +56,30 @@ app.controller("en", ["$scope", "$http", "$routeParams", function($scope, $http,
 
 
     // paginator
+    $scope.indexPag = 3;
+    $scope.varIndexPag = 0;
+    $scope.numPage = ($scope.countriesES.length);
+    $scope.back = function() {
+
+        if ($scope.varIndexPag > 0) {
+
+            $scope.indexPag = 3;
+            $scope.varIndexPag -= 1;
+
+        }
+
+    }
+
+
+    $scope.next = function() {
 
 
 
+        $scope.indexPag = 3;
+        $scope.varIndexPag += 3;
 
 
+
+    }
 
 }])

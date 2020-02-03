@@ -9,21 +9,31 @@
     <input type="search" class="large" ng-model="searchOfCountry" placeholder="City, area code, phone code">
 </form>
 
+
+<!-- paginator -->
+<div>
+    {{numPage}}
+    <button ng-click="back()">Back</button>
+    <button ng-click="next()">Next</button>
+</div>
+
+
+
 <!-- cards countries -->
 
 
 <section class="cards" ng-hide="IfNotExistParams== 0">
 
 
-    <article ng-repeat="countries in countriesES | filter: searchOfCountry ">
+    <article ng-repeat="countries in countriesES | filter: searchOfCountry| limitTo:indexPag:varIndexPag">
 
-        <div class="card__countries">
+        <div class="card__countries ">
 
-            <h1 class="title__cards">{{countries.name}}</h1>
-            <img ng-src={{countries.flag}} alt="image countries" class="in card__countries__image">
+            <h1 class="title__cards ">{{countries.name}}</h1>
+            <img ng-src={{countries.flag}} alt="image countries " class="in card__countries__image ">
 
-            <a href="#!choose/es/{{countries.alpha2Code}}" class="btn--error  minmin between letter3">
-                <span class="fas fa-paper-plane"> </span>
+            <a href="#!choose/es/{{countries.alpha2Code}} " class="btn--error minmin between letter3 ">
+                <span class="fas fa-paper-plane "> </span>
             </a>
 
         </div>
@@ -35,89 +45,89 @@
 
 
 
-<section class="in" ng-hide="IfNotExistParams== 1">
+<section class="in " ng-hide="IfNotExistParams==1 ">
 
-    <article class="cards__only" ng-repeat="country in countriesOnlyES | limitTo : 1">
+    <article class="cards__only " ng-repeat="country in countriesOnlyES>
 
-        <div class="card__only" ng-hide="!country.nativeName" ng-if="country.nativeName">
+        <div class=" card__only " ng-hide="!country.nativeName " ng-if="country.nativeName ">
 
-            <h1 class="title__cards only__title" ng-hide="!country.name">{{country.name}}</h1>
-            <img ng-src={{country.flag}} alt="image countries" class="in image__only" ng-hide="!country.nativeName">
+            <h1 class="title__cards only__title " ng-hide="!country.name ">{{country.name}}</h1>
+            <img ng-src={{country.flag}} alt="image countries " class="in image__only " ng-hide="!country.nativeName ">
 
 
             <br>
-            <span class="text--red" ng-hide="!country.nativeName">Detail</span>
+            <span class="text--red " ng-hide="!country.nativeName ">Detail</span>
             <br>
 
-            <div class="between" ng-hide="!country.nativeName">
-                <span class="between__title">Native name</span>
+            <div class="between " ng-hide="!country.nativeName ">
+                <span class="between__title ">Native name</span>
                 <span>{{country.nativeName}}</span>
             </div>
 
-            <div class="between" ng-hide="!country.capital">
-                <span class="between__title">Capital</span>
+            <div class="between " ng-hide="!country.capital ">
+                <span class="between__title ">Capital</span>
                 <span>{{country.capital}}</span>
             </div>
 
 
-            <div class="between" ng-hide="!country.alpha2Code">
-                <span class="between__title">Alpha code</span>
+            <div class="between " ng-hide="!country.alpha2Code ">
+                <span class="between__title ">Alpha code</span>
                 <span>{{country.alpha2Code}}</span>
             </div>
 
 
 
-            <div class="between" ng-hide="!country.callingCodes">
-                <span class="between__title">  Called code</span>
+            <div class="between " ng-hide="!country.callingCodes ">
+                <span class="between__title ">  Called code</span>
                 <span>{{country.callingCodes | cutKey}}</span >
             </div>
 
 
-            <div class="between" ng-hide="!country.region"> 
-                <span class="between__title">  Region</span>
+            <div class="between " ng-hide="!country.region "> 
+                <span class="between__title ">  Region</span>
                 <span>{{country.region}}</span >
             </div>
 
-            <div class="between" ng-hide="!country.subregion">
-                <span class="between__title"> Subregion</span>
+            <div class="between " ng-hide="!country.subregion ">
+                <span class="between__title "> Subregion</span>
                 <span>{{country.subregion}}</span >
             </div>
 
-            <div class="between" ng-hide="!country.area">
-                <span class="between__title"> Area code</span>
+            <div class="between " ng-hide="!country.area ">
+                <span class="between__title "> Area code</span>
                 <span>{{country.area}}</span >
             </div>
 
-            <div class="between" ng-hide="!country.timezones">
-                <span class="between__title"> Timezones</span>
+            <div class="between " ng-hide="!country.timezones ">
+                <span class="between__title "> Timezones</span>
                 <span>{{country.timezones | cutKeyAndChar}}</span >
             </div>
 
-            <span class=" text--orange" ng-hide="!country.nativeName">currencies</span>
+            <span class=" text--orange " ng-hide="!country.nativeName ">currencies</span>
 
-                <div class="between" ng-hide="!country.nativeName">
-                    <span class="between__title">Code</span>
+                <div class="between " ng-hide="!country.nativeName ">
+                    <span class="between__title ">Code</span>
                     <span>{{country.currencies[0].code}}</span >
                 </div>
 
-                <div class="between" ng-hide="!country.nativeName">
-                    <span class="between__title">Name</span>
+                <div class="between " ng-hide="!country.nativeName ">
+                    <span class="between__title ">Name</span>
                     <span>{{country.currencies[0].name}}</span>
                 </div>
 
-                <div class="between" ng-hide="!country.nativeName">
-                    <span class="between__title">Symbol</span>
+                <div class="between " ng-hide="!country.nativeName ">
+                    <span class="between__title ">Symbol</span>
                     <span>{{country.currencies[0].symbol}}</span  >
                 </div>
 
 
-                <span class=" text--orange" ng-hide="!country.nativeName" >Borders</span>
+                <span class=" text--orange " ng-hide="!country.nativeName " >Borders</span>
 
                     <div>
 
-                        <div class="between">
-                            <span ng-repeat="bord in country.borders">
-                                <a class="btn--error" ng-href="#!choose/es/{{bord}}">{{bord}}
+                        <div class="between ">
+                            <span ng-repeat="bord in country.borders ">
+                                <a class="btn--error " ng-href="#!choose/es/{{bord}} ">{{bord}}
                                 </a></span>
                         </div>
 

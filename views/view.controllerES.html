@@ -15,7 +15,7 @@
 <section class="cards" ng-hide="IfNotExistParams== 0">
 
 
-    <article ng-repeat="countries in countriesES | limitTo: 3 | filter: searchOfCountry ">
+    <article ng-repeat="countries in countriesES | filter: searchOfCountry ">
 
         <div class="card__countries">
 
@@ -37,7 +37,7 @@
 
 <section class="in" ng-hide="IfNotExistParams== 1">
 
-    <article class="cards__only" ng-repeat="country in countriesOnlyES | limitTo : 1">
+    <article class="cards__only" ng-repeat="country in countriesOnlyES ">
 
         <div class="card__only" ng-hide="!country.nativeName">
 

@@ -13,7 +13,7 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
     $scope.IfNotExistParams = null;
     $scope.spinnChange = 1;
     $scope.searchOfCountry = ''
-
+    $scope.paginatorView = 0;
     $scope.route = $routeParams['id']
 
     if (!$scope.route) {
@@ -37,7 +37,7 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
         $scope.IfNotExistParams = 0;
         let urlS = 'https://restcountries.eu/rest/v2/alpha/' + $scope.route
 
-
+        $scope.paginatorView = 1;
 
         $http({
 
@@ -45,7 +45,6 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
             url: urlS
 
         }).then(function(response) {
-
 
             $scope.countriesOnlyES = (response)
 
@@ -64,6 +63,31 @@ app.controller("es", ["$scope", "$http", "$routeParams", function($scope, $http,
 
 
     // paginator
+    $scope.indexPag = 3;
+    $scope.varIndexPag = 0;
+    $scope.numPage = ($scope.countriesES.length);
+    $scope.back = function() {
+
+        if ($scope.varIndexPag > 0) {
+
+            // $scope.indexPag = 3;
+            $scope.varIndexPag -= 1;
+
+        }
+
+    }
+
+
+    $scope.next = function() {
+
+
+
+        // $scope.indexPag = 3;
+        $scope.varIndexPag += 1;
+
+
+
+    }
 
 
 }])

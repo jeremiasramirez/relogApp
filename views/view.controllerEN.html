@@ -8,20 +8,20 @@
     <input type="search" class="large" ng-model="searchOfCountry" placeholder="City, area code, phone code">
 </form>
 
-
 <!-- paginator -->
-<div class="paginatorButtons">
+<div class="paginatorButtons" ng-if="paginatorView==1">
 
     <button ng-click="back()">Back</button>
     <button ng-click="next()">Next</button>
 </div>
 
 
-
 <!-- cards countries -->
 
 
 <section class="cards" ng-hide="IfNotExistParams== 0">
+
+
 
 
     <article ng-repeat="countries in countriesES | filter: searchOfCountry| limitTo:indexPag:varIndexPag track by $index">

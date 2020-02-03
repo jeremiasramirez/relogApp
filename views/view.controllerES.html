@@ -5,6 +5,15 @@
 
 <span class=" fas fa-circle-notch spinn"></span>
 
+
+<!-- paginator -->
+<div class="paginatorButtons" ng-if="paginatorView==0">
+
+    <button ng-click="back()">Back</button>
+    <button ng-click="next()">Next</button>
+</div>
+
+
 <!-- searchs countries -->
 <form ng-hide="IfNotExistParams== 0" class="form in">
     <input type="search" class="large" ng-model="searchOfCountry" placeholder="City, area code, phone code">
@@ -16,7 +25,7 @@
 <section class="cards" ng-hide="IfNotExistParams== 0">
 
 
-    <article ng-repeat="countries in countriesES | filter: searchOfCountry ">
+    <article ng-repeat="countries in countriesES | filter: searchOfCountry | limitTo:indexPag:varIndexPag track by $index">
 
         <div class="card__countries">
 

@@ -12,10 +12,12 @@ app.controller("en", ["$scope", "$http", "$routeParams", function($scope, $http,
     $scope.IfNotExistParams = null;
     $scope.spinnChange = 1;
     $scope.searchOfCountry = ''
-
+    $scope.paginatorView = 0;
     $scope.route = $routeParams['id']
 
     if (!$scope.route) {
+
+        $scope.paginatorView = 1;
         $scope.IfNotExistParams = 1;
         let urlS = 'https://restcountries.eu/rest/v2/lang/en'
 

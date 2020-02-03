@@ -1,5 +1,5 @@
 <!-- back page button -->
-<span class="backButton in" ng-click="backButton()"> <span class="fas fa-long-arrow-alt-left"></span></span>
+<span class="backButton in fas fa-long-arrow-alt-left" ng-click="backButton()"></span>
 
 
 <span class=" fas fa-circle-notch spinn"></span>
@@ -11,8 +11,8 @@
 
 
 <!-- paginator -->
-<div>
-    {{numPage}}
+<div class="paginatorButtons">
+
     <button ng-click="back()">Back</button>
     <button ng-click="next()">Next</button>
 </div>
@@ -25,7 +25,7 @@
 <section class="cards" ng-hide="IfNotExistParams== 0">
 
 
-    <article ng-repeat="countries in countriesES | filter: searchOfCountry| limitTo:indexPag:varIndexPag">
+    <article ng-repeat="countries in countriesES | filter: searchOfCountry| limitTo:indexPag:varIndexPag track by $index">
 
         <div class="card__countries ">
 

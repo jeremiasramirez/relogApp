@@ -3,7 +3,7 @@
 
 
 
-<span class=" fas fa-circle-notch spinn"></span>
+<span class=" fas fa-circle-notch spinn "></span>
 
 
 <!-- paginator -->
@@ -22,12 +22,12 @@
 <!-- cards countries -->
 
 
-<section class="cards" ng-hide="IfNotExistParams== 0">
+<section class="cards " ng-hide="IfNotExistParams== 0">
 
 
-    <article ng-repeat="countries in countriesES | filter: searchOfCountry | limitTo:indexPag:varIndexPag track by $index">
+    <article class="in" ng-repeat="countries in countriesES | filter: searchOfCountry | limitTo:indexPag:varIndexPag track by $index">
 
-        <div class="card__countries">
+        <div class="card__countries in">
 
             <h1 class="title__cards">{{countries.name}}</h1>
             <img ng-src={{countries.flag}} alt="image countries" class="in card__countries__image">
@@ -126,7 +126,7 @@
                     <div>
 
                         <div class="between">
-                            <span ng-repeat="bord in country.borders"><a class="btn--error" ng-href="#!choose/es/{{bord}}">{{bord}}</a></span ng-repeat="bord in " >
+                            <span ng-repeat="bord in country.borders | limitTo:4"><a class="btn--error" ng-href="#!choose/es/{{bord}}">{{bord}}</a></span ng-repeat="bord in " >
                     </div>
 
                 </div>

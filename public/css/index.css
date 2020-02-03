@@ -192,6 +192,14 @@
             flex-direction: column;
             align-items: center;
             margin: .6em;
+            box-shadow: .8px .4px 8px rgb(238, 232, 232);
+            transition: .8s;
+        }
+        
+        .card__countries:hover {
+            transition: .9s;
+            transform: scale(1.1);
+            cursor: pointer;
         }
         
         @media screen and (max-width: 500px) {
@@ -298,6 +306,7 @@
             margin: 0;
             margin-left: -12px;
             height: 45px;
+            z-index: 100;
         }
         
         .paginatorButtons button {
@@ -310,4 +319,21 @@
             width: 90px;
             font-weight: 600;
             font-family: arial;
+        }
+        
+        .between__title {
+            font-weight: 600;
+            font-family: sans-serif;
+            color: blueviolet;
+            font-style: normal;
+        }
+        
+        .between span {
+            font-family: arial;
+            color: rgb(139, 23, 105);
+        }
+        
+        .card__only {
+            box-shadow: .4px .4px 8px #eee;
+            padding-left: -10px;
         }

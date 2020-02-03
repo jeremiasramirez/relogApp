@@ -1,7 +1,7 @@
 <!-- back page button -->
 <button class="backButton" ng-click="backButton()"> <span class="in fas fa-long-arrow-alt-left"></span> </button>
 
-<span class=" fas fa-circle-notch spinn"></span>
+<span class=" fas fa-circle-notch spinn "></span>
 
 <!-- searchs countries -->
 <form ng-hide="IfNotExistParams== 0" class="form in">
@@ -26,9 +26,9 @@
 
     <article ng-repeat="countries in countriesES | filter: searchOfCountry| limitTo:indexPag:varIndexPag track by $index">
 
-        <div class="card__countries ">
+        <div class="card__countries in">
 
-            <h1 class="title__cards ">{{countries.name}}</h1>
+            <h1 class="title__cards">{{countries.name}}</h1>
             <img ng-src={{countries.flag}} alt="image countries " class="in card__countries__image ">
 
             <a href="#!choose/es/{{countries.alpha2Code}} " class="btn--error minmin between letter3 ">

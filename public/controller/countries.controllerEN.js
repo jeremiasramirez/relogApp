@@ -63,7 +63,7 @@ app.controller("en", ["$scope", "$http", "$routeParams", function($scope, $http,
 
         if ($scope.varIndexPag > 0) {
 
-            $scope.indexPag = 3;
+            // $scope.indexPag = 3;
             $scope.varIndexPag -= 1;
 
         }
@@ -75,8 +75,8 @@ app.controller("en", ["$scope", "$http", "$routeParams", function($scope, $http,
 
 
 
-        $scope.indexPag = 3;
-        $scope.varIndexPag += 3;
+        // $scope.indexPag = 3;
+        $scope.varIndexPag += 1;
 
 
 

@@ -194,7 +194,7 @@
             flex-direction: column;
             align-items: center;
             margin: .6em;
-            box-shadow: .8px .4px 8px rgb(238, 232, 232);
+            /* box-shadow: .8px .4px 8px rgb(238, 232, 232); */
             transition: .8s;
         }
         
@@ -336,6 +336,6 @@
         }
         
         .card__only {
-            box-shadow: .4px .4px 8px #eee;
+            /* box-shadow: .4px .4px 8px #eee; */
             padding-left: -10px;
         }

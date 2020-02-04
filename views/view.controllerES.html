@@ -71,7 +71,7 @@
 
             <div class="between" ng-hide="!country.population">
                 <span class="between__title">Population</span>
-                <span>{{country.population}}</span>
+                <span>{{country.population | number}}</span>
             </div>
 
             <div class="between" ng-hide="!country.alpha2Code">

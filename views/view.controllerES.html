@@ -69,6 +69,10 @@
                 <span>{{country.capital}}</span>
             </div>
 
+            <div class="between" ng-hide="!country.population">
+                <span class="between__title">Population</span>
+                <span>{{country.population}}</span>
+            </div>
 
             <div class="between" ng-hide="!country.alpha2Code">
                 <span class="between__title">Alpha code</span>
